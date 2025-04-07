@@ -1,7 +1,7 @@
 Config = {}
 
 -- Framework Settings
-Config.Framework = "esx"    -- Options: "esx", "qbcore", or "none"
+Config.Framework = "esx"    -- Options: "esx", "qbcore", "qbx", or "none"
 
 -- Key Bindings
 Config.OpenKey = 212       -- HOME key
