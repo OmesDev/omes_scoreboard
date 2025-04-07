@@ -51,6 +51,16 @@ local function GetPlayersWithJobs()
                 }
             end
         end
+    elseif Config.Framework == "qbx" then
+        for _, playerId in ipairs(GetPlayers()) do
+            local Player = exports.qbx_core:GetPlayer(tonumber(playerId))
+            if Player then
+                playerJobs[tostring(playerId)] = {
+                    job = Player.PlayerData.job.name,
+                    jobGrade = Player.PlayerData.job.grade.level
+                }
+            end
+        end
     end
     
     return playerJobs

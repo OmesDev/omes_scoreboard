@@ -2,12 +2,12 @@
 
 Discord: https://discord.gg/dATEunPQ2t
 
-A modern, feature-rich player scoreboard for FiveM servers. Compatible with both ESX and QBCore frameworks.
+A modern, feature-rich player scoreboard for FiveM servers. Compatible with both ESX and QBCore and QBOX frameworks
 
 ## Features
 
 - Clean, modern UI with customizable position and size
-- Support for ESX and QBCore frameworks
+- Support for ESX and QBCore and QBOX frameworks
 - Display of job counts for emergency services and other configured jobs
 - Job icons next to player names
 - Player ID display in 3D above characters
@@ -26,7 +26,7 @@ A modern, feature-rich player scoreboard for FiveM servers. Compatible with both
 ### Basic Setup
 - Set your preferred framework in `config.lua`:
   ```lua
-  Config.Framework = "esx"  -- Options: "esx", "qbcore", or "none"
+  Config.Framework = "esx"  -- Options: "esx", "qbcore", "qbx" or "none"
   ```
 
 ### Job Customization

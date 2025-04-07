@@ -3,7 +3,7 @@ local playerPings = {}
 local playerJobs = {}
 local serverPlayerList = {}
 local scrollOffset = 0
-local ESX, QBCore = nil, nil
+local ESX, QBCore, QBOX = nil, nil, false
 
 CreateThread(function()
     if Config.Framework == "esx" then
@@ -59,7 +59,14 @@ local function GetAllPlayers()
                     playerJob = playerData.job.name
                     playerJobGrade = playerData.job.grade.level
                 end
+            elseif Config.Framework == "qbx" then
+                local playerData = QBX.PlayerData
+                if playerData and playerData.job then
+                    playerJob = playerData.job.name
+                    playerJobGrade = playerData.job.grade.level
+                end
             end
+        else
         end
         
         table.insert(players, {
